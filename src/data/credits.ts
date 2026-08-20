@@ -7,28 +7,28 @@ export interface Credit {
 
 export const CREDITS: Credit[] = [
   {
-    title: "DAE Diorama Retake — Picturesque Holiday Home",
+    title: "DAE Diorama Retake - Picturesque Holiday Home",
     author: "Yorick Van Malderen",
     license: "CC BY 4.0",
-    source: "https://sketchfab.com/3d-models/dae-diorama-retake-picturesque-holiday-home-69962b5fafcd4d2f88d42e23aac69dea",
+    source: "https://skfb.ly/pMJGr",
   },
   {
-    title: "Osprey — Flying Raptor Rigged Bird",
+    title: "Osprey – Flying Raptor Rigged Bird",
     author: "Pigcraft",
     license: "CC BY 4.0",
-    source: "https://sketchfab.com/3d-models/osprey-flying-raptor-rigged-bird-9e65ce0542a24ea388e81e3e6e9c9054",
+    source: "https://skfb.ly/pMJVJ",
   },
   {
-    title: "A macaw flying 3d model free",
+    title: "A macaw_flying 3d model free",
     author: "iRahulRajput",
     license: "CC BY 4.0",
-    source: "https://sketchfab.com/3d-models/a-macaw-flying-3d-model-free-0c3df3ec36c441b383c742d30652950e",
+    source: "https://skfb.ly/pMnIr",
   },
   {
     title: "Ramen",
     author: "stylo0",
     license: "CC BY 4.0",
-    source: "https://sketchfab.com/3d-models/ramen-43a749d98ae640e3aef3437428c6a3fa",
+    source: "https://skfb.ly/pLUFC",
   },
   {
     title: "Cute cats 3D model",
