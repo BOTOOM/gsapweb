@@ -38,12 +38,27 @@ test.describe("narrative experience", () => {
 
     const chestButton = page.locator(".chest-button");
     await expect(chestButton).toBeVisible();
-    const chestCenter = await page.evaluate(() => {
+    const chestLayout = await page.evaluate(() => {
       const element = document.querySelector<HTMLButtonElement>(".chest-button");
       if (!element) throw new Error("The chest interaction is not measurable");
       const rect = element.getBoundingClientRect();
-      return { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
+      return {
+        bottom: rect.bottom,
+        left: rect.left,
+        right: rect.right,
+        top: rect.top,
+        viewportHeight: window.innerHeight,
+        viewportWidth: window.innerWidth,
+      };
     });
+    expect(chestLayout.top).toBeGreaterThanOrEqual(0);
+    expect(chestLayout.bottom).toBeLessThanOrEqual(chestLayout.viewportHeight);
+    expect(chestLayout.left).toBeGreaterThanOrEqual(0);
+    expect(chestLayout.right).toBeLessThanOrEqual(chestLayout.viewportWidth);
+    const chestCenter = {
+      x: (chestLayout.left + chestLayout.right) / 2,
+      y: (chestLayout.top + chestLayout.bottom) / 2,
+    };
     await page.mouse.click(chestCenter.x, chestCenter.y);
     await expect(page.locator('.visually-hidden[role="status"]')).toContainText("Golpe número 1");
 

@@ -132,7 +132,7 @@ a:focus-visible {
   top: 50%;
   left: max(1.5rem, env(safe-area-inset-left));
   width: min(39rem, calc(100vw - 3rem));
-  transform: translateY(-50%);
+  translate: 0 -50%;
   pointer-events: none;
 }
 
@@ -616,7 +616,7 @@ a:focus-visible {
     bottom: max(6.4rem, calc(env(safe-area-inset-bottom) + 5rem));
     left: max(1.2rem, env(safe-area-inset-left));
     width: auto;
-    transform: none;
+    translate: none;
   }
 
   .loader-copy__title {
