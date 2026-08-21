@@ -8,4 +8,4 @@
 - Validate optimized assets with `npm run assets:validate`.
 - Start local development with `npm run dev`.
 - Production builds derive the GitHub Pages base path from `GITHUB_REPOSITORY`; the intended repository name is `gsapweb`.
-- GitHub Pages deploys from `.github/workflows/deploy-pages.yml` on `main` after the repository is connected.
+- GitHub Pages deploys from `.github/workflows/deploy-pages.yml` on `main` or `master` after the repository is connected.
